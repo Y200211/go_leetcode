@@ -2,12 +2,14 @@ package main
 
 import (
 	"fmt"
-	"go_leetcode/array/_27_RemoveElement"
+	"go_leetcode/linked_list/_206_ReverseList"
 )
 
 func main() {
-	nums1 := []int{0, 1, 2, 2, 3, 0, 4, 2}
-	val := 2
-	res, length := _27_RemoveElement.RemoveElement(nums1, val)
-	fmt.Println(res, length)
+	nums1 := []int{1, 2, 6, 3, 4, 5, 6}
+	head1 := _206_ReverseList.CreateLinkedList(nums1)
+	_206_ReverseList.ShowLinkedList(head1)
+	fmt.Println("----------------")
+	head2 := _206_ReverseList.ReverseList(head1)
+	_206_ReverseList.ShowLinkedList(head2)
 }
